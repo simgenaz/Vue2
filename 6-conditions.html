@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    
+<div id="app">
+    <button @click="showBox = !showBox">Göster/Gizle</button>
+    <p v-if="showBox">Bu sayfa açildiğinda gösterilicek</p>
+    <p v-else-if="!showBox">Bu sayfa açildiğinda gösterilmicek.. Buton yardimiyla gözükücek..</p>
+    <p v-else>Aksi halde gözükücek bölüm..</p>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            showBox: false
+        }
+    })
+
+
+
+
+</script>
+
+
+</body>
+</html>
