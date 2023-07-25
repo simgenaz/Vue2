@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    
+<div id="app">
+    <h2>{{title}}</h2>
+    <button>{{buttonTitle}}</button>
+    <p>{{paragraph}}</p>
+    <p v-text="paragraph"></p>
+    <a v-bind:href="link" v-bind:data-id="dataId"> Youtube </a>
+    <p v-html="details"></p>
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            title: "Test Baslik",
+            buttonTitle: "Tikla Gelsinn..",
+            paragraph: "Lorem ipsum dolor sit amet.",
+            link: "https://www.youtube.com/",
+            dataId: 1,
+            details: "<b> Bu bir haber detayidir.</b>"
+        }
+    })
+
+
+
+
+</script>
+
+
+</body>
+</html>
